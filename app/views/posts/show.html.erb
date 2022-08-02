@@ -20,16 +20,15 @@
     </div>
   </div>
   <%= form_with model: @comment, local: true do |form| %>
+    <%= form.hidden_field :post_id, value: @post.id %>
     <div class="form-group">
       <%= form.label :author %>
       <%= form.text_field :author, class: 'form-control' %>
     </div>
-
     <div class="form-group">
       <%= form.label :body %>
       <%= form.text_area :body, class: 'form-control', rows: 5 %>
     </div>
-
     <%= form.submit "Enviar", class: 'btn btn-primary',
      data: { disable_within: "Enviando..." } %>  
   <% end %>
