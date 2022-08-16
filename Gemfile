@@ -11,6 +11,10 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.0'
 #I18n
 gem 'rails-i18n'
+#Friendly-id
+gem 'friendly_id'
+#PG_Search
+gem 'pg_search'
 # Botstrap
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 # Use SCSS for stylesheets
