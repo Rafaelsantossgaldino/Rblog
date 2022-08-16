@@ -22,11 +22,11 @@
       <%= form.hidden_field :post_id, value: @post.id %>
       <div class="form-group">
         <%= form.label :author %>
-        <%= form.text_field :author, class: 'form-control' %>
+        <%= form.text_field :author, class: 'form-control', required: true %>
       </div>
       <div class="form-group">
         <%= form.label :body %>
-        <%= form.text_area :body, class: 'form-control', rows: 5 %>
+        <%= form.text_area :body, class: 'form-control', rows: 5, required: true %>
       </div>
       <%= form.submit "Enviar", class: 'btn btn-primary',
       data: { disable_within: "Enviando..." } %>  

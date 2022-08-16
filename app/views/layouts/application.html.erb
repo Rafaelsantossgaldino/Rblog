@@ -30,6 +30,21 @@
         </button>
        </div>
       <% end %>
+
+      <div class="row">
+        <div class="col-4 offset-8">
+          <div class="search">
+            <%= form_with url: search_posts_path, method: :get, local: true, class: 'form-iline' do |form| %>
+              <div class="form-group mx-3 mb-3 ">
+                <%= form.search_field :q, class: 'form-control', required: true, placeholder: 'Busca'%>
+              </div>
+              <%= form.submit "Busca", class: 'btn btn-primary mb-3', data: { disabled_with: "Buscando...."} %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+
       <%= yield %>
     </div>
 
